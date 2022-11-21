@@ -1,0 +1,238 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    color: #fff;
+    /* background-image: url(./img/body.jpg); */
+    background-color: #000;
+    /* background-size: auto; */
+    position: relative;
+}
+
+/*common css*/
+a{
+   text-decoration: none; 
+   color: #fff;
+   cursor: pointer;
+
+}
+li{
+    list-style: none;
+}
+button{
+    cursor: pointer;
+}
+/*common css ends*/
+
+/*************************************************
+**************************************************
+Modal Css Starts here
+**************************************************
+*************************************************/
+.container-modal{
+    position: relative;
+
+}
+
+
+body::after{
+    content: "";
+    background: url(./img/body.jpg) repeat;
+    background-size: auto;
+    opacity: 0.5;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1;   
+  }
+.sign-in-modal{
+    background-color: #E50914;
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 5px;
+    color: #fff;
+    margin: 5% 0 0;
+}
+.remember-help{
+    font-size: 0.9rem;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20%;
+}
+.anchor:hover{
+    text-decoration: underline;
+    
+}
+.modal-header{
+    margin: -20px 0 0 20px ;
+}
+.modal-header img{
+    width: 220px;
+    height: 120px;
+}
+/*Sign-in-form*/
+.sign-in-form{
+    width: 30%;
+    margin: 0  auto 5%;
+    padding:4%;
+    background-color: rgb(0, 0, 0);
+
+}
+.sign-in-form h1{
+   font-size: 2rem;
+   margin-bottom: 8%;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+}
+form .input-filled{
+    padding: 5%;
+    width: 100%;
+    background-color: transparent;
+    border: none;
+    font-size: 1.1rem;
+    color: #f0e8e8;
+    border-radius: 5px;
+    outline: none;
+    z-index: 1;
+}
+form .input-filled:focus~span{
+    position: absolute;
+    font-size: 12px;
+    top: 5px;
+}
+
+.mail-pass{
+    position: relative;
+    background-color: #333333;
+    border-radius: 5px;
+    display: block;
+}
+.mail-pass span{
+    position: absolute;
+    left: 15px;
+    top: 20px;
+    color: #a19a9a;
+    z-index: 0;
+    width: 100%;
+    display: block;
+
+}
+.back{
+    display: flex;
+    padding: 5% 0;
+}
+.back p{
+    color:#666666;
+   margin-right: 2px;
+}
+.term{
+    font-size: 0.9rem;
+    color: #666666;
+}
+.privacy{
+    display: block;
+    margin-top: 3%;
+    text-align: justify;
+    padding-bottom: 0;
+    height: 6rem;
+}
+.term a{
+    color: rgb(8, 8, 245);
+}
+#contact-modal{
+    position: relative;
+    margin: 20% 0;
+}
+.c-modal{
+    padding: 4% 22%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #000;
+    opacity: 0.7;
+    color: darkred;
+    
+    
+}
+
+.footer{
+    background-color: #fff;
+    height: 35px;
+}
+.all-link{
+    display: flex;
+    justify-content: space-between;
+    align-items: top;
+    margin-top: 30px;
+    font-size: 0.8rem;
+}
+.link li{
+    margin-bottom: 1.2rem;
+}
+@media only screen and (max-width: 768px){
+    body{
+        background-color: #000;
+    }
+    body::after{
+        content: "";
+        background: #000;
+    }
+    .container-modal{
+        margin: 1% 0;
+    }
+   .showcase-modal{
+    border-bottom: 3px solid #333333;
+   }
+    .modal-header{
+        margin: 0;
+    }
+    .modal-header img{
+        width: 100px;
+        height: 70px;
+    }
+    .sign-in-form {
+        width: 100%;
+        margin: 0 auto;
+        padding: 3%;
+        background-color: rgb(0, 0, 0);}
+    .remember-help {
+            font-size: 0.9rem;
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 5%;}
+    .term{
+        display: block;
+        margin: 2% 0;
+        overflow: hidden;
+        font-size: 0.8rem;
+    }
+    .privacy {
+            display: block;
+            margin-top: 3%;
+            text-align: justify;
+            padding-bottom: 2%;
+            height: 6rem;
+        }
+    #contact-modal {
+            margin: 50% 0;
+    }
+    .c-modal {
+        padding: 4%;
+        width: 100%;
+    }
+    .all-link{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+}
